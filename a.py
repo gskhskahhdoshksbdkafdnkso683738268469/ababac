@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/<path:b>")
 def aa(b):
-    x = r.get("https://prod-ec-eu-central-1.video.pscp.tv/"+b)
+    x = r.get("http://51.159.98.123:80/"+b)
     h = {"Content-Type":x.headers["Content-Type"],"Access-Control-Allow-Origin":"*"}
     return x.content,200,h
 
